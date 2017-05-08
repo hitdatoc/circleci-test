@@ -9,4 +9,8 @@ app.get('/', function(request, response){
 
 app.use(favicon(__dirname + '/favicon.ico'));
 
+app.get('/favicon.ico', function(request, response){
+	response.sendFile(__dirname + '/favicon.ico');
+});
+
 http.listen(process.env.PORT || 8888);
